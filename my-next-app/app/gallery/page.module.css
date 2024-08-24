@@ -1,0 +1,142 @@
+
+.galleryList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* グリッドの列を自動調整 */
+    gap: 13px; /* 画像間のスペースを調整 */
+    list-style: none;
+    padding: 0;
+}
+
+.imageContainer {
+    width: 100%;
+    padding-top: 75%; /* アスペクト比を4:3に設定 */
+    position: relative;
+    border: 2px solid var(--color-border); /* 枠線を追加 */
+    border-radius: 15px; /* 角を丸くする */
+    overflow: hidden; /* 画像が枠を超えないようにする */
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像をコンテナに合わせてカバー */
+    transform: translate(-50%, -50%); /* 画像を中央に配置 */
+    transition: box-shadow 0.3s ease, opacity 0.3s ease; /* ホバー効果のトランジション */
+}
+
+.image:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.308); /* ホバー時の影効果 */
+    opacity: 0.9; /* ホバー時の透明度効果 */
+}
+
+.container {
+    background-color: #b9b4ce; /* 背景色 */
+    border-radius: #bbabc067;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.267);
+    padding: 20px;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.144); /* 透明度を調整 */
+    z-index: -1; /* 背景として表示 */
+}
+
+.list {
+    background: #fdfdfcb9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid var(--color-text-main);
+    transition: transform 0.3s ease;
+}
+
+.list:hover {
+    transform: translateY(-10px);
+}
+
+.name, .position, .profile {
+    padding: 10px;
+    font-size: 12px; /* 文字サイズを小さく設定 */
+    color: var(--color-text-main);
+    font-weight: bold;
+}
+
+.name {
+    font-size: 14px; /* 名前の文字サイズを少し大きく設定 */
+    font-weight: bold;
+}
+
+.position, .profile {
+    color: #000000e8;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color:#f7f2f288;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.363);
+    width: 80%; /* 幅を80%に設定 */
+    max-width: 800px; /* 最大幅を800pxに設定 */
+    height: auto; /* 高さを自動調整 */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.closeButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #9e91aa;
+    color: var(--color-text-unpainted);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.closeButton:hover {
+    background: #b6b67e;
+}
+
+.modalImage {
+    width: 100%;
+    height: auto;
+    max-height: 80vh; 
+    object-fit: contain; 
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #1a1919;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
