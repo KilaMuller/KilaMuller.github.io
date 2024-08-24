@@ -48,7 +48,7 @@ export default function Home() {
         <h1 className={styles.title}>Commission</h1>
         <p className={styles.description}>sample text</p>
       </div>
-      <Image className={styles.bgimg} src="/white.png" alt=""
+      <Image className={styles.bgimg} src="/White.png" alt=""
       width={2200}
       height={2100} 
       />

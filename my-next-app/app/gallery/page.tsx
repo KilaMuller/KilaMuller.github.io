@@ -22,7 +22,7 @@ const data: { contents: GalleryType[] } = {
         {
             id: 1,
             images: [
-                { url: '/white.png', width: 600, height: 400 },
+                { url: '/White.png', width: 600, height: 400 },
             ],
             profile: 'Original'
         },
