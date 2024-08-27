@@ -15,6 +15,7 @@
     --color-current: #eee;
     --color-button-primary: #333;
     --border-radius: 4px;
+    --background-color:#333;
 }
 * {
    box-sizing: border-box;
